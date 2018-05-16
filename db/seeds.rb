@@ -14,3 +14,12 @@
   )
   restaurant.save!
 end
+
+20.times do
+  review = Review.new(
+    content: Faker::Lorem.paragraph,
+    rating: [0, 1, 2, 3, 4, 5].sample,
+    restaurant_id: (1..20).to_a.sample
+  )
+  review.save!
+end

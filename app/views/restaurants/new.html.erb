@@ -1,2 +1,10 @@
-<h1>Restaurants#new</h1>
-<p>Find me in app/views/restaurants/new.html.erb</p>
+<h1>Add a New Restaurant</h1>
+
+<%= simple_form_for(@restaurant) do |form| %>
+  <%= form.input :name %>
+  <%= form.input :address %>
+  <%= form.input :phone_number %>
+  <%= form.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"] %>
+  <%= form.submit "add restaurant", class: "btn btn-primary" %>
+<% end %>
+

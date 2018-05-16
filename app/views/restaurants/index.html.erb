@@ -1,2 +1,11 @@
-<h1>Restaurants#index</h1>
+<h1>Restaurants</h1>
 <p>Find me in app/views/restaurants/index.html.erb</p>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= restaurant.name %>
+      <%= link_to "see details", restaurant_path(restaurant), class: "btn btn-primary" %>
+    </li>
+  <% end %>
+</ul>
+
